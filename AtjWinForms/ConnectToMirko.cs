@@ -10,7 +10,7 @@ using AtjWinForms;
 
 namespace AtjWinForms
 {
-    class ConnectToMirko
+    class ConnectToMirko 
     {
         public static string GetFullNickname(string mirek)
         {
