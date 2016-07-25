@@ -87,7 +87,7 @@ namespace AtjWinForms
             }
             return avek;
         }
-        //to lepsze
+        //to lepsze 
         public static List<string> PobierzTagi(string mirek)
         {
             List<string> tagi = new List<string>();
