@@ -11,11 +11,19 @@ namespace AtjWinForms
     {
         public static HttpWebResponse GetResponseFromWypok(string mirek)
         {
-            var request = (HttpWebRequest)WebRequest.Create("http://wykop.pl/ludzie/" + mirek);
-            request.ProtocolVersion = HttpVersion.Version10;
-            request.Method = "GET";
-            var response = (HttpWebResponse)request.GetResponse();
-            return response;
+            try
+            {
+                var request = (HttpWebRequest)WebRequest.Create("http://wykop.pl/ludzie/" + mirek);
+                request.ProtocolVersion = HttpVersion.Version10;
+                request.Method = "GET";
+                var response = (HttpWebResponse)request.GetResponse();
+                return response;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
 
 
         }

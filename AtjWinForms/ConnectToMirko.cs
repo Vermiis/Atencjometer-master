@@ -129,10 +129,12 @@ namespace AtjWinForms
         public static int CommonTags(string mirek1, string mirek2)
         {
             var x = 0;
+            var tag1 = PobierzTagi(mirek1);
+            var tag2 = PobierzTagi(mirek2);
 
-            Parallel.ForEach(PobierzTagi(mirek1), item =>
+            Parallel.ForEach(tag1, item =>
             {
-                Parallel.ForEach(PobierzTagi(mirek2), tag =>
+                Parallel.ForEach(tag2, tag =>
                 {
 
                     if (item.Equals(tag))

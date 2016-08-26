@@ -19,5 +19,20 @@
         </RichTextBox>
         <Image HorizontalAlignment="Left" Height="100" Margin="121,39,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.16,0.444"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="250,197,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="84,83,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <RichTextBox HorizontalAlignment="Left" Height="100" Margin="80,150,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.03,0.894">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox HorizontalAlignment="Left" Height="100" Margin="80,150,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.03,0.894">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
     </Grid>
 </Window>

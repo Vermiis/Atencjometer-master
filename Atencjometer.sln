@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atencjometer", "Atencjometer\Atencjometer.csproj", "{24C36290-754D-4537-935E-FA4B6AC8848F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atencjometerx", "Atencjometer\Atencjometerx.csproj", "{24C36290-754D-4537-935E-FA4B6AC8848F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectToWypok", "ConnectToWypok\ConnectToWypok.csproj", "{A7CE1E21-F237-4BBC-AFC8-D80BFE606DC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtjWinForms", "AtjWinForms\AtjWinForms.csproj", "{C7282F81-A118-4BF6-B3EB-4C6E2F1A6951}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wypok", "ClassLibrary1\Wypok.csproj", "{2C54552B-A49C-4619-810F-3FB89B3D8B2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atencjometr", "Atencjometr\Atencjometr.csproj", "{544281C5-9C67-47F8-9249-05F9E0F50493}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2C54552B-A49C-4619-810F-3FB89B3D8B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C54552B-A49C-4619-810F-3FB89B3D8B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C54552B-A49C-4619-810F-3FB89B3D8B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544281C5-9C67-47F8-9249-05F9E0F50493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544281C5-9C67-47F8-9249-05F9E0F50493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544281C5-9C67-47F8-9249-05F9E0F50493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544281C5-9C67-47F8-9249-05F9E0F50493}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
