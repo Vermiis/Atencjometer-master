@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 using System.Net;
 using System.IO;
 using System.Drawing;
-using AtjWinForms;
 
-namespace AtjWinForms
+namespace Wypok
 {
-    class ConnectToMirko 
+    public class ConnectToMirko
     {
         public static string GetFullNickname(string mirek)
         {
@@ -51,7 +50,7 @@ namespace AtjWinForms
                     var urls = doc.DocumentNode.Descendants("img")
                                  .Select(e => e.GetAttributeValue("src", null))
                                  .Where(s => !String.IsNullOrEmpty(s));
-          
+              
                     Parallel.ForEach(urls, item =>
                     {
                         if (item.Contains(mirek))
@@ -68,17 +67,18 @@ namespace AtjWinForms
             }
             return link;
         }
-        public static Image UstawAvek(string mirek)
-        {
-            System.Drawing.Image avek;
-            var request = WebRequest.Create(PobierzAvatar(GetFullNickname(mirek)));
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
-            {
-                avek = System.Drawing.Image.FromStream(stream);
-            }
-            return avek;
-        }
+        //public static Image UstawAvek(string mirek)
+        //{
+        //    System.Drawing.Image avek;
+        //    var request = WebRequest.Create(PobierzAvatar(GetFullNickname(mirek)));
+        //    using (var response = request.GetResponse())
+        //    using (var stream = response.GetResponseStream())
+        //    {
+        //        avek = System.Drawing.Image.FromStream(stream);
+               
+        //    }
+        //    return avek;
+        //}
         //to lepsze 
         public static List<string> PobierzTagi(string mirek)
         {
@@ -137,11 +137,9 @@ namespace AtjWinForms
                     );
 
             }
-                );     
+                );
             return x;
         }
 
     }
-
-
 }

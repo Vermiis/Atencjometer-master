@@ -13,5 +13,6 @@ namespace Atencjometr
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }
