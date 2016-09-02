@@ -32,13 +32,14 @@ namespace Atencjometr
           
            tagim1.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek1.Text);        
            tagim2.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek2.Text);
+            avm1.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text)));
+            avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
+          
+
 
             lbl_wspolne.Content = Wypok.ConnectToMirko.CommonTags(mirek1.Text, mirek2.Text);
         
-
-           // Uri iconUri1 = new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text), UriKind.RelativeOrAbsolute);
-           // avm1.Source = BitmapFrame.Create(iconUri1);
-           //vm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text), UriKind.Relative));
+            
 
 
 
