@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-
 namespace Atencjometr
 {
     /// <summary>
@@ -31,13 +30,15 @@ namespace Atencjometr
         private void btn_compare_Click(object sender, RoutedEventArgs e)
         {
           
-            tagim1.Selection.Text = Wypok.ConnectToMirko.PobierzTagi(mirek1.Text).ToString();
-            
-            tagim2.Selection.Text = Wypok.ConnectToMirko.PobierzTagi(mirek2.Text).ToString();
+           tagim1.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek1.Text);        
+           tagim2.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek2.Text);
+
+            lbl_wspolne.Content = Wypok.ConnectToMirko.CommonTags(mirek1.Text, mirek2.Text);
+        
 
            // Uri iconUri1 = new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text), UriKind.RelativeOrAbsolute);
            // avm1.Source = BitmapFrame.Create(iconUri1);
-            avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text), UriKind.Relative));
+           //vm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text), UriKind.Relative));
 
 
 
