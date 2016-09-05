@@ -11,13 +11,13 @@ using Wypok;
 
 namespace AtjWinForms
 {
-    class ConnectToMirko 
+    class ConnectToMirko
     {
         public static string GetFullNickname(string mirek)
         {
             string fullNick = "";
-            
-            
+
+
 
             using (var streamReader = new StreamReader(Wypok.GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
             {
@@ -49,12 +49,12 @@ namespace AtjWinForms
                     var result = streamReader.ReadToEnd();
                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(result);
-                 
+                    //  var innerText = doc.DocumentNode.Descendants("img").Select(x => x.InnerText).ToList();
                     var imgs = doc.DocumentNode.SelectNodes("//img");
                     var urls = doc.DocumentNode.Descendants("img")
                                  .Select(e => e.GetAttributeValue("src", null))
                                  .Where(s => !String.IsNullOrEmpty(s));
-          
+
                     Parallel.ForEach(urls, item =>
                     {
                         if (item.Contains(mirek))
@@ -82,7 +82,7 @@ namespace AtjWinForms
             }
             return avek;
         }
-
+        //to lepsze 
         public static List<string> PobierzTagi(string mirek)
         {
             List<string> tagi = new List<string>();
@@ -92,7 +92,7 @@ namespace AtjWinForms
 
                 {
                     var result = streamReader.ReadToEnd();
-                 
+                    // Console.WriteLine(result);
                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(result);
                     var innerText = doc.DocumentNode.Descendants("a").Select(x => x.InnerText).ToList();
@@ -100,19 +100,18 @@ namespace AtjWinForms
                     {
                         if (item.Contains("#") && item.Contains("("))
                         {
-                          
+                            //Console.WriteLine(item);
+                            //tagi.Add(item);
                             tagi.Add(item.Split(' ').First());
                         }
                     }
                 }
             }
-          
             catch (Exception ex)
             {
-            
-                throw;
+                //obsluga 404 do naruchania
+                Console.WriteLine(ex.ToString());
             }
-           
 
             return tagi;
 
@@ -141,7 +140,7 @@ namespace AtjWinForms
                     );
 
             }
-                );     
+                );
             return x;
         }
 
