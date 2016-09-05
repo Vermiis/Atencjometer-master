@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,10 +31,22 @@ namespace Atencjometr
         private void btn_compare_Click(object sender, RoutedEventArgs e)
         {
 
+            var nick1 = mirek1.Text;
+            var nick2 = mirek2.Text;
+            if (nick1.Length == 0 || nick2.Length == 0)
+            {
+                MessageBox.Show("Wpisz oba nicki");
+                return;
+            }
             try
             {
                 tagim1.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek1.Text);
                 tagim2.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek2.Text);
+            }
+            catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
+            {
+                MessageBox.Show("Nie istnieje taki mirek");
+                return;
             }
             catch (Exception exc)
             {
@@ -46,7 +59,7 @@ namespace Atencjometr
 
                 //string link = Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text);
                 //avm1.Source = new BitmapImage(new Uri(link));
-                // avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
+                avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
                 lbl_wspolne.Content = Wypok.ConnectToMirko.CommonTags(mirek1.Text, mirek2.Text);
             
            

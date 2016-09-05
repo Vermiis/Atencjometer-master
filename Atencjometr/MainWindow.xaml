@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Atencjometr"
         xmlns:Wypok="clr-namespace:Wypok;assembly=ClassLibrary1" x:Class="Atencjometr.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="525">
+        Title="MainWindow" Height="550" Width="525" MinWidth="550" MinHeight="525">
     <Grid>
         <TextBox x:Name="mirek1" HorizontalAlignment="Left" Height="24" Margin="60,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
         <TextBox x:Name="mirek2" HorizontalAlignment="Left" Height="24" Margin="310,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
@@ -32,7 +32,7 @@
           
         </Image>
         <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Left" Margin="220,76,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_wspolne" Content="Label" HorizontalAlignment="Left" Margin="220,182,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_wspolne" Content="Label" HorizontalAlignment="Left" Margin="225,182,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Left" Margin="220,260,0,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click"/>
 
     </Grid>

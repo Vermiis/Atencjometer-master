@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 468);
+            this.ClientSize = new System.Drawing.Size(539, 471);
             this.Controls.Add(this.lblCommonTags);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rtxtBTagi1);
@@ -131,6 +131,7 @@
             this.Controls.Add(this.btnCompare);
             this.Controls.Add(this.txtBNick2);
             this.Controls.Add(this.txtbNick1);
+            this.MinimumSize = new System.Drawing.Size(555, 510);
             this.Name = "Atencjometer";
             this.Text = "Atencjometer";
             ((System.ComponentModel.ISupportInitialize)(this.avMirek2)).EndInit();
