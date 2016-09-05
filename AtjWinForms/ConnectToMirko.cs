@@ -44,7 +44,7 @@ namespace AtjWinForms
             try
             {
 
-                using (var streamReader = new StreamReader(GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
+                using (var streamReader = new StreamReader(Wypok.GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
                 {
                     var result = streamReader.ReadToEnd();
                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
@@ -88,7 +88,7 @@ namespace AtjWinForms
             List<string> tagi = new List<string>();
             try
             {
-                using (var streamReader = new StreamReader(GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
+                using (var streamReader = new StreamReader(Wypok.GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
 
                 {
                     var result = streamReader.ReadToEnd();
