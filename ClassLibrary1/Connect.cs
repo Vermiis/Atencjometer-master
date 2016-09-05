@@ -45,7 +45,7 @@ namespace Wypok
                     var result = streamReader.ReadToEnd();
                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(result);
-                    //  var innerText = doc.DocumentNode.Descendants("img").Select(x => x.InnerText).ToList();
+                   
                     var imgs = doc.DocumentNode.SelectNodes("//img");
                     var urls = doc.DocumentNode.Descendants("img")
                                  .Select(e => e.GetAttributeValue("src", null))
@@ -67,19 +67,7 @@ namespace Wypok
             }
             return link;
         }
-        //public static Image UstawAvek(string mirek)
-        //{
-        //    System.Drawing.Image avek;
-        //    var request = WebRequest.Create(PobierzAvatar(GetFullNickname(mirek)));
-        //    using (var response = request.GetResponse())
-        //    using (var stream = response.GetResponseStream())
-        //    {
-        //        avek = System.Drawing.Image.FromStream(stream);
-               
-        //    }
-        //    return avek;
-        //}
-        //to lepsze 
+    
 
         
         public static List<string> PobierzTagi(string mirek)
@@ -91,7 +79,7 @@ namespace Wypok
 
                 {
                     var result = streamReader.ReadToEnd();
-                    // Console.WriteLine(result);
+                
                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(result);
                     var innerText = doc.DocumentNode.Descendants("a").Select(x => x.InnerText).ToList();
@@ -99,17 +87,15 @@ namespace Wypok
                     {
                         if (item.Contains("#") && item.Contains("("))
                         {
-                            //Console.WriteLine(item);
-                            //tagi.Add(item);
+                           
                             tagi.Add(item.Split(' ').First());
                         }
                     }
                 }
             }
             catch (Exception ex)
-            {
-                //obsluga 404 do naruchania
-                Console.WriteLine(ex.ToString());
+            {         
+                throw;
             }
 
             return tagi;

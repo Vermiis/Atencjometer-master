@@ -35,7 +35,7 @@ namespace Atencjometr
             var nick2 = mirek2.Text;
             if (nick1.Length == 0 || nick2.Length == 0)
             {
-                MessageBox.Show("Wpisz oba nicki");
+                System.Windows.MessageBox.Show("Wpisz oba nicki");
                 return;
             }
             try
@@ -45,22 +45,29 @@ namespace Atencjometr
             }
             catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
             {
-                MessageBox.Show("Nie istnieje taki mirek");
+                System.Windows.MessageBox.Show("Nie istnieje taki mirek");
+                return;
+            }
+            catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.ServiceUnavailable)
+            {
+                MessageBox.Show("Serwer nie odpowiada");
                 return;
             }
             catch (Exception exc)
             {
-                MessageBox.Show("Error{0}", exc.ToString());
+                System.Windows.MessageBox.Show("Error{0}", exc.ToString());
                 throw;
             }
-            string link1 = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
+            // string link1 = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
 
-                avm1.Source = new ImageSourceConverter().ConvertFromString(link1) as ImageSource;
+            // avm1.Source = new ImageSourceConverter().ConvertFromString(link1) as ImageSource;
 
-                //string link = Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text);
-                //avm1.Source = new BitmapImage(new Uri(link));
-                avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
-                lbl_wspolne.Content = Wypok.ConnectToMirko.CommonTags(mirek1.Text, mirek2.Text);
+            //string link = Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text);
+            //avm1.Source = new BitmapImage(new Uri(link));
+            lbl_wspolne.Content = Wypok.ConnectToMirko.CommonTags(mirek1.Text, mirek2.Text);
+          //  avm1.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text)));
+           // avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
+            
             
            
 
