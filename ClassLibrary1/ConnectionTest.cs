@@ -10,7 +10,12 @@ namespace ClassLibrary1
     {
         public static bool DoesExist(string mirek1, string mirek2)
         {
-            return true;
+            if (mirek1.Length == 0 || mirek2.Length == 0)
+            {
+                return false;
+            }
+            else
+                return true;
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace Wypok
 {
-    public class ConnectToMirko
+    public class Connect
     {
         public static string GetFullNickname(string mirek)
         {
@@ -29,6 +29,7 @@ namespace Wypok
                         fullNick = line;
                     }
                 });
+            
 
             }
             return fullNick;

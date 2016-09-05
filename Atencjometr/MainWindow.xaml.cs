@@ -40,8 +40,8 @@ namespace Atencjometr
             }
             try
             {
-                tagim1.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek1.Text);
-                tagim2.Selection.Text = Wypok.ConnectToMirko.WypiszTagi(mirek2.Text);
+                tagim1.Selection.Text = Wypok.Connect.WypiszTagi(mirek1.Text);
+                tagim2.Selection.Text = Wypok.Connect.WypiszTagi(mirek2.Text);
             }
             catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
             {
@@ -58,13 +58,13 @@ namespace Atencjometr
                 System.Windows.MessageBox.Show("Error{0}", exc.ToString());
                 throw;
             }
-            // string link1 = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
+            string link1 = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
 
-            // avm1.Source = new ImageSourceConverter().ConvertFromString(link1) as ImageSource;
+            avm1.Source = new ImageSourceConverter().ConvertFromString(link1) as ImageSource;
 
             //string link = Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text);
             //avm1.Source = new BitmapImage(new Uri(link));
-            lbl_wspolne.Content = Wypok.ConnectToMirko.CommonTags(mirek1.Text, mirek2.Text);
+            lbl_wspolne.Content = Wypok.Connect.CommonTags(mirek1.Text, mirek2.Text);
           //  avm1.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text)));
            // avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
             
