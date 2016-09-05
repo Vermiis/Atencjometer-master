@@ -24,6 +24,7 @@ namespace AtjWinForms
 
             var nick1 = txtbNick1.Text;
             var nick2 = txtBNick2.Text;
+            
             rtxtBTagi1.Text = ConnectToMirko.WypiszTagi(txtbNick1.Text);
             rtxtBTagi2.Text = ConnectToMirko.WypiszTagi(txtBNick2.Text);
             avMirek1.Image = ConnectToMirko.UstawAvek(txtbNick1.Text);
