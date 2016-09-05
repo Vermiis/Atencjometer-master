@@ -63,7 +63,7 @@ namespace Wypok
             }
             catch (Exception ex)
             {
-                throw;
+                link= "http://www.bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
             }
             return link;
         }
@@ -80,6 +80,8 @@ namespace Wypok
         //    return avek;
         //}
         //to lepsze 
+
+        
         public static List<string> PobierzTagi(string mirek)
         {
             List<string> tagi = new List<string>();

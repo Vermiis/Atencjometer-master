@@ -84,9 +84,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConnectToWypok\ConnectToWypok.csproj">
-      <Project>{a7ce1e21-f237-4bbc-afc8-d80bfe606dc6}</Project>
-      <Name>ConnectToWypok</Name>
+    <ProjectReference Include="..\ClassLibrary1\Wypok.csproj">
+      <Project>{2c54552b-a49c-4619-810f-3fb89b3d8b2c}</Project>
+      <Name>Wypok</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,6 +7,7 @@ using System.Net;
 using System.IO;
 using System.Drawing;
 using AtjWinForms;
+using Wypok;
 
 namespace AtjWinForms
 {
@@ -15,8 +16,10 @@ namespace AtjWinForms
         public static string GetFullNickname(string mirek)
         {
             string fullNick = "";
+            
+            
 
-            using (var streamReader = new StreamReader(GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
+            using (var streamReader = new StreamReader(Wypok.GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
             {
                 var result = streamReader.ReadToEnd();
 
