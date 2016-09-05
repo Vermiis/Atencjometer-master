@@ -106,11 +106,13 @@ namespace AtjWinForms
                     }
                 }
             }
+          
             catch (Exception ex)
             {
             
                 throw;
             }
+           
 
             return tagi;
 

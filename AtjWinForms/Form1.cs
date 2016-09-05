@@ -44,7 +44,12 @@ namespace AtjWinForms
                 MessageBox.Show("Serwer nie odpowiada");
                 return;
             }
-            catch (WebException ex)
+            catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.RequestTimeout)
+            {
+                MessageBox.Show("Zbyt dlugi czas");
+                return;
+            } 
+            catch (Exception ex)
             {
                 MessageBox.Show("Cos sie... cos sie popsuło");
                 return;

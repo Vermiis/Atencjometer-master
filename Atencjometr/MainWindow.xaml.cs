@@ -58,15 +58,21 @@ namespace Atencjometr
                 System.Windows.MessageBox.Show("Error{0}", exc.ToString());
                 throw;
             }
-            string link1 = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
+            string link = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
+          
+            string link1 = Wypok.Connect.PobierzAvatar(mirek1.Text);
+            string link2 = Wypok.Connect.PobierzAvatar(mirek2.Text);
 
-            avm1.Source = new ImageSourceConverter().ConvertFromString(link1) as ImageSource;
-
-            //string link = Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text);
+            avm1.Source = new BitmapImage(new Uri(link));
+            avm2.Source = new BitmapImage(new Uri(link2));
+           // avm1.Source = new ImageSourceConverter().ConvertFromString(link2) as ImageSource;
+        
+                                
+            //avm2.Source = new ImageSourceConverter().ConvertFromString(link) as ImageSource;
             //avm1.Source = new BitmapImage(new Uri(link));
             lbl_wspolne.Content = Wypok.Connect.CommonTags(mirek1.Text, mirek2.Text);
           //  avm1.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text)));
-           // avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
+          // avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
             
             
            
