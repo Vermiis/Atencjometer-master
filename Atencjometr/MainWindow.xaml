@@ -37,7 +37,7 @@
 
         </Image>
         <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Left" Margin="175.674,76,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="lbl_wspolne" Content="Label" HorizontalAlignment="Left" Margin="180.674,182,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lbl_wspolne" Content="Label" HorizontalAlignment="Left" Margin="200,182,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Left" Margin="175.674,260,0,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click" Grid.Column="1"/>
 
     </Grid>

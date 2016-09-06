@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using System.Threading;
 
 
 namespace AtjWinForms
@@ -31,8 +32,8 @@ namespace AtjWinForms
             }
             try
             {
-                Wypok.GetResponses.GetResponseFromWypok(nick1);
-                Wypok.GetResponses.GetResponseFromWypok(nick2);
+                rtxtBTagi1.Text = ConnectToMirko.WypiszTagi(txtbNick1.Text);
+                rtxtBTagi2.Text = ConnectToMirko.WypiszTagi(txtBNick2.Text);
             }
             catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
             {
@@ -56,9 +57,9 @@ namespace AtjWinForms
             }
 
 
-            rtxtBTagi1.Text = ConnectToMirko.WypiszTagi(txtbNick1.Text);
-            rtxtBTagi2.Text = ConnectToMirko.WypiszTagi(txtBNick2.Text);
+            
             avMirek1.Image = ConnectToMirko.UstawAvek(txtbNick1.Text);
+            Thread.Sleep(90);
             avMirek2.Image = ConnectToMirko.UstawAvek(txtBNick2.Text);
             lblCommonTags.Text = ConnectToMirko.CommonTags(nick1, nick2).ToString();
            

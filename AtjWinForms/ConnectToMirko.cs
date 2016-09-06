@@ -15,11 +15,12 @@ namespace AtjWinForms
     {
         public static string GetFullNickname(string mirek)
         {
+           
             string fullNick = "";
-            
-            
 
-            using (var streamReader = new StreamReader(Wypok.GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
+
+
+            using (var streamReader = new StreamReader(GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
             {
                 var result = streamReader.ReadToEnd();
 
@@ -44,17 +45,17 @@ namespace AtjWinForms
             try
             {
 
-                using (var streamReader = new StreamReader(Wypok.GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
+                using (var streamReader = new StreamReader(GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
                 {
                     var result = streamReader.ReadToEnd();
                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(result);
-                 
+
                     var imgs = doc.DocumentNode.SelectNodes("//img");
                     var urls = doc.DocumentNode.Descendants("img")
                                  .Select(e => e.GetAttributeValue("src", null))
                                  .Where(s => !String.IsNullOrEmpty(s));
-          
+
                     Parallel.ForEach(urls, item =>
                     {
                         if (item.Contains(mirek))
@@ -70,6 +71,7 @@ namespace AtjWinForms
                 throw;
             }
             return link;
+
         }
         public static Image UstawAvek(string mirek)
         {
@@ -88,7 +90,7 @@ namespace AtjWinForms
             List<string> tagi = new List<string>();
             try
             {
-                using (var streamReader = new StreamReader(Wypok.GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
+                using (var streamReader = new StreamReader(GetResponses.GetResponseFromWypok(mirek).GetResponseStream()))
 
                 {
                     var result = streamReader.ReadToEnd();
