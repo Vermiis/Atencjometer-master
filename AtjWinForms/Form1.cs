@@ -25,11 +25,12 @@ namespace AtjWinForms
 
             var nick1 = txtbNick1.Text;
             var nick2 = txtBNick2.Text;
-            if (nick1.Length==0 ||nick2.Length==0)
+            if (nick1.Length == 0 || nick2.Length == 0)
             {
                 MessageBox.Show("Wpisz oba nicki");
                 return;
             }
+
             try
             {
                 rtxtBTagi1.Text = ConnectToMirko.WypiszTagi(txtbNick1.Text);
@@ -45,19 +46,18 @@ namespace AtjWinForms
                 MessageBox.Show("Serwer nie odpowiada");
                 return;
             }
-            catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.RequestTimeout)
+
+            catch (Exception)
             {
-                MessageBox.Show("Zbyt dlugi czas");
-                return;
-            } 
-            catch (Exception ex)
-            {
+
                 MessageBox.Show("Cos sie... cos sie popsuło");
                 return;
+
             }
 
 
-            
+            rtxtBTagi1.Text = ConnectToMirko.WypiszTagi(txtbNick1.Text);
+            rtxtBTagi2.Text = ConnectToMirko.WypiszTagi(txtBNick2.Text);
             avMirek1.Image = ConnectToMirko.UstawAvek(txtbNick1.Text);
             Thread.Sleep(90);
             avMirek2.Image = ConnectToMirko.UstawAvek(txtBNick2.Text);
