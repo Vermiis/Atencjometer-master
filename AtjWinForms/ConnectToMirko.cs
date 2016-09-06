@@ -11,7 +11,7 @@ using Wypok;
 
 namespace AtjWinForms
 {
-    class ConnectToMirko
+    public class ConnectToMirko
     {
         public static string GetFullNickname(string mirek)
         {
@@ -60,7 +60,7 @@ namespace AtjWinForms
                     {
                         if (item.Contains(mirek))
                         {
-                            Console.WriteLine(item);
+                           
                             link = item;
                         }
                     });

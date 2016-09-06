@@ -97,6 +97,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AtjWinForms\AtjWinForms.csproj">
+      <Project>{c7282f81-a118-4bf6-b3eb-4c6e2f1a6951}</Project>
+      <Name>AtjWinForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibrary1\Wypok.csproj">
       <Project>{2c54552b-a49c-4619-810f-3fb89b3d8b2c}</Project>
       <Name>Wypok</Name>

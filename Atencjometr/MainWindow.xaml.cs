@@ -61,27 +61,27 @@ namespace Atencjometr
             }
             string link = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
 
-            string link1 = Wypok.Connect.PobierzAvatar(mirek1.Text);
+            string link1 = Wypok.Connect.PobierzAvatar(mirek1.Text.ToString());
             string link2 = Wypok.Connect.PobierzAvatar(mirek2.Text);
 
+          
 
-            //if (Uri.IsWellFormedUriString(!null, UriKind.RelativeOrAbsolute))
-            //    avm1.Source = new BitmapImage(new Uri(link1));
-            //else
-            //    avm1.Source = new BitmapImage(new Uri("http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg"));
 
             Uri myUri = null;
-            if (Uri.TryCreate(Wypok.Connect.PobierzAvatar(mirek1.Text), UriKind.Absolute, out myUri))
+            if (Uri.TryCreate(Wypok.Connect.PobierzAvatar(nick1), UriKind.Absolute, out myUri))
             {
+                
                 avm1.Source = new BitmapImage(myUri);
             }
             else
             {
                 avm1.Source= new BitmapImage(new Uri(link));
             }
+            
             myUri = null;
-            if (Uri.TryCreate(Wypok.Connect.PobierzAvatar(mirek2.Text), UriKind.Absolute, out myUri))
+            if (Uri.TryCreate(Wypok.Connect.PobierzAvatar(nick2), UriKind.Absolute, out myUri))
             {
+                
                 avm2.Source = new BitmapImage(myUri);
             }
             else
@@ -89,32 +89,18 @@ namespace Atencjometr
                 avm2.Source = new BitmapImage(new Uri(link));
             }
 
-
-
-
-
-            // Thread.Sleep(90);
-            // avm2.Source = new BitmapImage(new Uri(link1));
-            //avm1.Source = new ImageSourceConverter().ConvertFromString(link2) as ImageSource;
-        
-                                
+            //Thread.Sleep(90);   
+            //avm1.Source = new ImageSourceConverter().ConvertFromString(link2) as ImageSource;                                    
             //avm2.Source = new ImageSourceConverter().ConvertFromString(link) as ImageSource;
-            //avm1.Source = new BitmapImage(new Uri(link));
             lbl_wspolne.Content = Wypok.Connect.CommonTags(mirek1.Text, mirek2.Text);
-          //  avm1.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek1.Text)));
-          // avm2.Source = new BitmapImage(new Uri(Wypok.ConnectToMirko.PobierzAvatar(mirek2.Text)));
-            
-            
-           
 
-
-
-
-
-
-
-
+                                
 
         }
+
+
+      
+
+
     }
 }

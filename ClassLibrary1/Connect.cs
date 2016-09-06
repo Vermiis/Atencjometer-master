@@ -47,16 +47,16 @@ namespace Wypok
                     HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(result);
                    
-                    var imgs = doc.DocumentNode.SelectNodes("//img");
+                  //  var imgs = doc.DocumentNode.SelectNodes("//img");
                     var urls = doc.DocumentNode.Descendants("img")
                                  .Select(e => e.GetAttributeValue("src", null))
                                  .Where(s => !String.IsNullOrEmpty(s));
               
                     Parallel.ForEach(urls, item =>
                     {
-                        if (item.Contains(mirek))
+                        if (item.Contains(GetFullNickname(mirek)))
                         {
-                            Console.WriteLine(item);
+                          
                             link = item;
                         }
                     });
@@ -103,7 +103,6 @@ namespace Wypok
         {
             return String.Join("\r\n", PobierzTagi(mirek));
         }
-
         public static int CommonTags(string mirek1, string mirek2)
         {
             var x = 0;
