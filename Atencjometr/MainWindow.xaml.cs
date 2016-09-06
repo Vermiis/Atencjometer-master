@@ -60,12 +60,7 @@ namespace Atencjometr
                 throw;
             }
             string link = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
-
-            string link1 = Wypok.Connect.PobierzAvatar(mirek1.Text.ToString());
-            string link2 = Wypok.Connect.PobierzAvatar(mirek2.Text);
-
-          
-
+               //serwer czasem            
 
             Uri myUri = null;
             if (Uri.TryCreate(Wypok.Connect.PobierzAvatar(nick1), UriKind.Absolute, out myUri))

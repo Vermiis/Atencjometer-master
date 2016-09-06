@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Atencjometr"
-        xmlns:Wypok="clr-namespace:Wypok;assembly=ClassLibrary1" x:Name="Atencjometr" x:Class="Atencjometr.MainWindow"
+        xmlns:Wypok="clr-namespace:Wypok;assembly=Wypok" x:Name="Atencjometr" x:Class="Atencjometr.MainWindow"
         mc:Ignorable="d"
         Title="Atencjometr" Height="550" Width="525" MinWidth="550" MinHeight="700">
     <Grid>
@@ -13,8 +13,8 @@
             <ColumnDefinition Width="323*"/>
             <ColumnDefinition Width="175*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="mirek1" HorizontalAlignment="Left" Height="24" Margin="15.674,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
-        <TextBox x:Name="mirek2" HorizontalAlignment="Left" Height="24" Margin="265.674,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="mirek1" HorizontalAlignment="Left" Height="24" Margin="16,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+        <TextBox x:Name="mirek2" HorizontalAlignment="Left" Height="24" Margin="266,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1"/>
         <RichTextBox x:Name="tagim1" IsReadOnly="True" HorizontalAlignment="Left" Height="250" Margin="16,142,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1" VerticalScrollBarVisibility="Visible">
             <FlowDocument>
                 <Paragraph>
@@ -30,15 +30,15 @@
             </FlowDocument>
         </RichTextBox>
         <Image x:Name="avm1" HorizontalAlignment="Left" Height="150" Margin="16,450,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
-        <Image x:Name="avm2" HorizontalAlignment="Left" Height="150" Margin="267,450,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1">
+        <Image x:Name="avm2" HorizontalAlignment="Left" Height="150" Margin="266,450,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1">
             <Image.Effect>
                 <BlurEffect/>
             </Image.Effect>
 
         </Image>
-        <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Left" Margin="175.674,76,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="lbl_wspolne" Content="Label" HorizontalAlignment="Left" Margin="200,182,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Left" Margin="175.674,260,0,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click" Grid.Column="1"/>
+        <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Left" Margin="180,76,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lbl_wspolne" Content="0" HorizontalAlignment="Left" Margin="210,180,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18"/>
+        <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Left" Margin="180,52,0,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click" Grid.Column="1"/>
        
 
     </Grid>
