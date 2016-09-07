@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Atencjometr"
         xmlns:Wypok="clr-namespace:Wypok;assembly=Wypok" x:Name="Atencjometr" x:Class="Atencjometr.MainWindow"
         mc:Ignorable="d"
-        Title="Atencjometr" Height="550" Width="525" MinWidth="550" MinHeight="700">
+        Title="Atencjometr" Height="670" Width="700" MinWidth="700" MinHeight="670" MaxWidth="700" MaxHeight="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="44*"/>
@@ -36,9 +36,9 @@
             </Image.Effect>
 
         </Image>
-        <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Center" Margin="180,76,60,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="lbl_wspolne" Content="0" HorizontalAlignment="Center" Margin="210,180,80,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18"/>
-        <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Center" Margin="180,52,60,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click" Grid.Column="1"/>
+        <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Center" Margin="180,76,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lbl_wspolne" Content="0" HorizontalAlignment="Center" Margin="210,180,30,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18"/>
+        <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Center" Margin="180,52,0,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click" Grid.Column="1"/>
        
 
     </Grid>
