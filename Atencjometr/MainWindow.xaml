@@ -14,7 +14,7 @@
             <ColumnDefinition Width="175*"/>
         </Grid.ColumnDefinitions>
         <TextBox x:Name="mirek1" HorizontalAlignment="Left" Height="24" Margin="16,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
-        <TextBox x:Name="mirek2" HorizontalAlignment="Left" Height="24" Margin="266,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="mirek2" HorizontalAlignment="Right" Height="24" Margin="266,52,60,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1"/>
         <RichTextBox x:Name="tagim1" IsReadOnly="True" HorizontalAlignment="Left" Height="250" Margin="16,142,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1" VerticalScrollBarVisibility="Visible">
             <FlowDocument>
                 <Paragraph>
@@ -22,7 +22,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox x:Name="tagim2" IsReadOnly="True" HorizontalAlignment="Left" Height="250" Margin="267,142,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1" VerticalScrollBarVisibility="Visible">
+        <RichTextBox x:Name="tagim2" IsReadOnly="True" HorizontalAlignment="Right" Height="250" Margin="267,142,60,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1" VerticalScrollBarVisibility="Visible">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>
@@ -30,15 +30,15 @@
             </FlowDocument>
         </RichTextBox>
         <Image x:Name="avm1" HorizontalAlignment="Left" Height="150" Margin="16,450,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
-        <Image x:Name="avm2" HorizontalAlignment="Left" Height="150" Margin="266,450,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1">
+        <Image x:Name="avm2" HorizontalAlignment="Right" Height="150" Margin="266,450,60,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Grid.Column="1">
             <Image.Effect>
                 <BlurEffect/>
             </Image.Effect>
 
         </Image>
-        <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Left" Margin="180,76,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="lbl_wspolne" Content="0" HorizontalAlignment="Left" Margin="210,180,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18"/>
-        <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Left" Margin="180,52,0,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click" Grid.Column="1"/>
+        <Label x:Name="label" Content="Wspolne tagi" HorizontalAlignment="Center" Margin="180,76,60,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lbl_wspolne" Content="0" HorizontalAlignment="Center" Margin="210,180,80,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18"/>
+        <Button x:Name="btn_compare" Content="Porownaj" HorizontalAlignment="Center" Margin="180,52,60,0" VerticalAlignment="Top" Width="75" Click="btn_compare_Click" Grid.Column="1"/>
        
 
     </Grid>

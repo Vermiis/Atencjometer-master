@@ -26,7 +26,6 @@ namespace Atencjometr
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void btn_compare_Click(object sender, RoutedEventArgs e)
@@ -39,6 +38,7 @@ namespace Atencjometr
                 System.Windows.MessageBox.Show("Wpisz oba nicki");
                 return;
             }
+         
             try
             {
                 tagim1.Selection.Text = Wypok.Connect.WypiszTagi(mirek1.Text);
@@ -59,8 +59,11 @@ namespace Atencjometr
                 System.Windows.MessageBox.Show("Error{0}", exc.ToString());
                 throw;
             }
+
+            
+
             string link = "http://bezpiecznykot.pl/wp-content/uploads/2015/12/kot-150x150.jpg";
-               //serwer czasem            
+               //serwer czasem nie odpowiada        
 
             Uri myUri = null;
             if (Uri.TryCreate(Wypok.Connect.PobierzAvatar(nick1), UriKind.Absolute, out myUri))
